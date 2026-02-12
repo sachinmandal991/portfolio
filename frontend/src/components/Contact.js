@@ -8,11 +8,11 @@ function Contact({ profile }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('/api/contact', form);
-      setStatus(res.data.message);
+      const res = await axios.post('https://portfolioo-seven-chi.vercel.app/api/contact', form);
+      setStatus(res.data.message || 'Message sent successfully!');
       setForm({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
-      setStatus('Error sending message');
+      setStatus('Error sending message. Please try email or WhatsApp.');
     }
   };
 
