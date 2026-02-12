@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 import './App.css';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
@@ -54,12 +53,6 @@ function App() {
       demo: '#'
     }
   ]);
-
-  useEffect(() => {
-    axios.get('/api/profile').then(res => setProfile(res.data)).catch(() => console.log('API not connected'));
-    axios.get('/api/skills').then(res => setSkills(res.data)).catch(() => console.log('API not connected'));
-    axios.get('/api/projects').then(res => setProjects(res.data)).catch(() => console.log('API not connected'));
-  }, []);
 
   return (
     <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
