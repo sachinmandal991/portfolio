@@ -56,9 +56,9 @@ function App() {
   ]);
 
   useEffect(() => {
-    axios.get('/api/profile').then(res => setProfile(res.data)).catch(() => {});
-    axios.get('/api/skills').then(res => setSkills(res.data)).catch(() => {});
-    axios.get('/api/projects').then(res => setProjects(res.data)).catch(() => {});
+    axios.get('/api/profile').then(res => setProfile(res.data)).catch(() => console.log('API not connected'));
+    axios.get('/api/skills').then(res => setSkills(res.data)).catch(() => console.log('API not connected'));
+    axios.get('/api/projects').then(res => setProjects(res.data)).catch(() => console.log('API not connected'));
   }, []);
 
   return (
