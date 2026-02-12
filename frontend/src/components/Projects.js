@@ -1,8 +1,6 @@
 import React from 'react';
 
 function Projects({ projects }) {
-  if (!projects || !Array.isArray(projects)) return null;
-  
   return (
     <section id="projects" className="projects">
       <div className="container">
