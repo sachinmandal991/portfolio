@@ -1,6 +1,8 @@
 import React from 'react';
 
 function Skills({ skills }) {
+  if (!skills || !Array.isArray(skills)) return null;
+  
   return (
     <section id="skills" className="skills">
       <div className="container">
