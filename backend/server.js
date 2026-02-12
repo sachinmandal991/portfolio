@@ -7,7 +7,7 @@ require('dotenv').config();
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:3002', 'https://your-frontend-url.vercel.app'],
+  origin: ['http://localhost:3002', 'https://portfolio-psi-lake-i32z4h5sah.vercel.app/'],
   credentials: true
 }));
 app.use(express.json());
